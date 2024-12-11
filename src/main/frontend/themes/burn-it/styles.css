@@ -1,0 +1,44 @@
+@import url('./main-layout.css');
+@import url('./views/statistics-view.css');
+@import url('./views/workout-view.css');
+@import url('./views/you-view.css');    html {
+      --lumo-shade: hsl(214, 0%, 0%);
+      --lumo-shade-5pct: hsla(214, 0%, 0%, 0.05);
+      --lumo-shade-10pct: hsla(214, 0%, 0%, 0.1);
+      --lumo-shade-20pct: hsla(214, 0%, 0%, 0.2);
+      --lumo-shade-30pct: hsla(214, 0%, 0%, 0.3);
+      --lumo-shade-40pct: hsla(214, 0%, 0%, 0.4);
+      --lumo-shade-50pct: hsla(214, 0%, 0%, 0.5);
+      --lumo-shade-60pct: hsla(214, 0%, 0%, 0.6);
+      --lumo-shade-70pct: hsla(214, 0%, 0%, 0.7);
+      --lumo-shade-80pct: hsla(214, 0%, 0%, 0.8);
+      --lumo-shade-90pct: hsla(214, 0%, 0%, 0.9);
+      --lumo-base-color: #000000;
+      --lumo-primary-color: hsl(214, 100%, 100%);
+      --lumo-primary-color-50pct: hsla(214, 100%, 100%, 0.5);
+      --lumo-primary-color-10pct: hsla(214, 100%, 100%, 0.1);
+      --lumo-primary-text-color: hsl(214, 0%, 98%);
+      --lumo-body-text-color: hsla(214, 0%, 97%, 0.94);
+
+    }
+
+    [theme~="dark"] {
+      --lumo-primary-color: hsla(0, 100%, 39%, 0.92);
+      --lumo-primary-color-50pct: hsla(0, 100%, 39%, 0.5);
+      --lumo-primary-color-10pct: hsla(0, 100%, 39%, 0.1);
+      --lumo-body-text-color: hsla(214, 100%, 100%, 0.9);
+      --lumo-primary-text-color: hsl(359, 100%, 64%);
+      --lumo-base-color: hsl(359, 35%, 21%);
+      --lumo-shade: hsl(359, 100%, 99%);
+      --lumo-shade-5pct: hsla(359, 100%, 99%, 0.05);
+      --lumo-shade-10pct: hsla(359, 100%, 99%, 0.1);
+      --lumo-shade-20pct: hsla(359, 100%, 99%, 0.2);
+      --lumo-shade-30pct: hsla(359, 100%, 99%, 0.3);
+      --lumo-shade-40pct: hsla(359, 100%, 99%, 0.4);
+      --lumo-shade-50pct: hsla(359, 100%, 99%, 0.5);
+      --lumo-shade-60pct: hsla(359, 100%, 99%, 0.6);
+      --lumo-shade-70pct: hsla(359, 100%, 99%, 0.7);
+      --lumo-shade-80pct: hsla(359, 100%, 99%, 0.8);
+      --lumo-shade-90pct: hsla(359, 100%, 99%, 0.9);
+
+    }

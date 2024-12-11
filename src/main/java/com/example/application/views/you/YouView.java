@@ -1,0 +1,147 @@
+package com.example.application.views.you;
+
+import com.example.application.components.avataritem.AvatarItem;
+import com.vaadin.flow.component.Composite;
+import com.vaadin.flow.component.avatar.Avatar;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.html.H3;
+import com.vaadin.flow.component.html.Span;
+import com.vaadin.flow.component.orderedlayout.FlexComponent;
+import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
+import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.Menu;
+import com.vaadin.flow.router.PageTitle;
+import com.vaadin.flow.router.Route;
+import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
+import com.vaadin.flow.theme.lumo.LumoUtility.Padding;
+import org.vaadin.lineawesome.LineAwesomeIconUrl;
+
+@PageTitle("You")
+@Route("you")
+@Menu(order = 2, icon = LineAwesomeIconUrl.FIRE_ALT_SOLID)
+public class YouView extends Composite<VerticalLayout> {
+
+    public YouView() {
+        HorizontalLayout layoutRow = new HorizontalLayout();
+        HorizontalLayout layoutRow2 = new HorizontalLayout();
+        Button buttonPrimary = new Button();
+        H3 h3 = new H3();
+        Avatar avatar = new Avatar();
+        VerticalLayout layoutColumn2 = new VerticalLayout();
+        AvatarItem avatarItem = new AvatarItem();
+        HorizontalLayout layoutRow5 = new HorizontalLayout();
+        H3 h32 = new H3();
+        HorizontalLayout layoutRow3 = new HorizontalLayout();
+        Button buttonPrimary2 = new Button();
+        Button buttonPrimary3 = new Button();
+        Button buttonPrimary4 = new Button();
+        HorizontalLayout layoutRow6 = new HorizontalLayout();
+        H3 h33 = new H3();
+        HorizontalLayout layoutRow4 = new HorizontalLayout();
+        Span badge = new Span();
+        Span badge2 = new Span();
+        Span badge3 = new Span();
+        getContent().setWidth("100%");
+        getContent().getStyle().set("flex-grow", "1");
+        layoutRow.addClassName(Gap.MEDIUM);
+        layoutRow.setWidth("100%");
+        layoutRow.setHeight("min-content");
+        layoutRow2.setHeightFull();
+        layoutRow.setFlexGrow(1.0, layoutRow2);
+        layoutRow2.addClassName(Gap.XLARGE);
+        layoutRow2.getStyle().set("flex-grow", "1");
+        layoutRow2.setMinWidth("326px");
+        layoutRow2.getStyle().set("flex-grow", "1");
+        layoutRow2.setAlignItems(Alignment.CENTER);
+        layoutRow2.setJustifyContentMode(JustifyContentMode.CENTER);
+        buttonPrimary.setText("Button");
+        layoutRow2.setAlignSelf(FlexComponent.Alignment.CENTER, buttonPrimary);
+        buttonPrimary.setWidth("min-content");
+        buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+        h3.setText("BURN IT");
+        layoutRow2.setAlignSelf(FlexComponent.Alignment.CENTER, h3);
+        h3.setWidth("max-content");
+        avatar.setName("Firstname Lastname");
+        layoutRow2.setAlignSelf(FlexComponent.Alignment.CENTER, avatar);
+        layoutColumn2.setWidth("100%");
+        layoutColumn2.getStyle().set("flex-grow", "1");
+        layoutColumn2.setAlignSelf(FlexComponent.Alignment.START, avatarItem);
+        avatarItem.setWidth("min-content");
+        setAvatarItemSampleData(avatarItem);
+        layoutRow5.setWidthFull();
+        layoutColumn2.setFlexGrow(1.0, layoutRow5);
+        layoutRow5.addClassName(Gap.MEDIUM);
+        layoutRow5.setWidth("100%");
+        layoutRow5.setHeight("30px");
+        h32.setText("Goals");
+        h32.setWidth("max-content");
+        layoutRow3.setWidthFull();
+        layoutColumn2.setFlexGrow(1.0, layoutRow3);
+        layoutRow3.addClassName(Gap.MEDIUM);
+        layoutRow3.setWidth("100%");
+        layoutRow3.setHeight("40px");
+        layoutRow3.setAlignItems(Alignment.CENTER);
+        layoutRow3.setJustifyContentMode(JustifyContentMode.CENTER);
+        buttonPrimary2.setText("Sleep");
+        buttonPrimary2.setWidth("min-content");
+        buttonPrimary2.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+        buttonPrimary3.setText("Activity");
+        buttonPrimary3.setWidth("min-content");
+        buttonPrimary3.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+        buttonPrimary4.setText("Health");
+        buttonPrimary4.setWidth("min-content");
+        buttonPrimary4.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+        layoutRow6.setWidthFull();
+        layoutColumn2.setFlexGrow(1.0, layoutRow6);
+        layoutRow6.addClassName(Gap.MEDIUM);
+        layoutRow6.setWidth("100%");
+        layoutRow6.setHeight("30px");
+        h33.setText("Badges");
+        h33.setWidth("max-content");
+        layoutRow4.setWidthFull();
+        layoutColumn2.setFlexGrow(1.0, layoutRow4);
+        layoutRow4.addClassName(Gap.LARGE);
+        layoutRow4.addClassName(Padding.LARGE);
+        layoutRow4.setWidth("100%");
+        layoutRow4.setHeight("73px");
+        layoutRow4.setAlignItems(Alignment.CENTER);
+        layoutRow4.setJustifyContentMode(JustifyContentMode.CENTER);
+        badge.setText("402 lifetime km");
+        badge.setWidth("min-content");
+        badge.getElement().getThemeList().add("badge");
+        badge2.setText("137 lifetime km");
+        badge2.setWidth("min-content");
+        badge2.getElement().getThemeList().add("badge");
+        badge3.setText("65 lifetime km");
+        badge3.setWidth("min-content");
+        badge3.getElement().getThemeList().add("badge");
+        getContent().add(layoutRow);
+        layoutRow.add(layoutRow2);
+        layoutRow2.add(buttonPrimary);
+        layoutRow2.add(h3);
+        layoutRow2.add(avatar);
+        getContent().add(layoutColumn2);
+        layoutColumn2.add(avatarItem);
+        layoutColumn2.add(layoutRow5);
+        layoutColumn2.add(h32);
+        layoutColumn2.add(layoutRow3);
+        layoutRow3.add(buttonPrimary2);
+        layoutRow3.add(buttonPrimary3);
+        layoutRow3.add(buttonPrimary4);
+        layoutColumn2.add(layoutRow6);
+        layoutColumn2.add(h33);
+        layoutColumn2.add(layoutRow4);
+        layoutRow4.add(badge);
+        layoutRow4.add(badge2);
+        layoutRow4.add(badge3);
+    }
+
+    private void setAvatarItemSampleData(AvatarItem avatarItem) {
+        avatarItem.setHeading("Aria Bailey");
+        avatarItem.setDescription("Endocrinologist");
+        avatarItem.setAvatar(new Avatar("Aria Bailey"));
+    }
+}
