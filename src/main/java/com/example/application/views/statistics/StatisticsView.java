@@ -73,7 +73,7 @@ public class StatisticsView extends Composite<VerticalLayout> {
         buttonPrimary.setText("Button");
         buttonPrimary.setWidth("min-content");
         buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        h3.setText("BURN IT");
+        h3.setText("BURN IT 🔥");
         layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h3);
         h3.setWidth("max-content");
         avatar.setName("Firstname Lastname");
@@ -90,7 +90,7 @@ public class StatisticsView extends Composite<VerticalLayout> {
         layoutColumn2.setWidth("100%");
         layoutColumn2.setHeight("132px");
         layoutColumn2.setJustifyContentMode(JustifyContentMode.CENTER);
-        layoutColumn2.setAlignItems(Alignment.START);
+        layoutColumn2.setAlignItems(Alignment.CENTER);
         progressBar2.setValue(0.5);
         h2.setText("8'305");
         h2.setWidth("max-content");
@@ -158,7 +158,7 @@ public class StatisticsView extends Composite<VerticalLayout> {
         layoutColumn6.addClassName(Padding.SMALL);
         layoutColumn6.getStyle().set("flex-grow", "1");
         layoutColumn6.getStyle().set("flex-grow", "1");
-        buttonSecondary.setText("Button");
+        buttonSecondary.setText("7h 32m of sleep");
         buttonSecondary.setWidth("min-content");
         buttonSecondary.setMinWidth("100px");
         buttonSecondary.setHeight("50px");

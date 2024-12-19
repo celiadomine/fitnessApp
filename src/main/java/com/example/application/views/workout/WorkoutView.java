@@ -1,5 +1,6 @@
 package com.example.application.views.workout;
 
+import com.example.application.views.you.YouView;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.avatar.Avatar;
@@ -17,8 +18,10 @@ import com.vaadin.flow.component.tabs.TabSheet;
 import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
 import org.vaadin.lineawesome.LineAwesomeIconUrl;
+import com.vaadin.flow.component.html.Image;
 
 @PageTitle("Workout")
 @Route("workout")
@@ -30,6 +33,8 @@ public class WorkoutView extends Composite<VerticalLayout> {
         Button buttonPrimary = new Button();
         H3 h3 = new H3();
         Avatar avatar = new Avatar();
+        RouterLink link = new RouterLink("", YouView.class);
+        link.add(avatar);
         TabSheet tabSheet = new TabSheet();
         H5 h5 = new H5();
         H3 h32 = new H3();
@@ -54,16 +59,15 @@ public class WorkoutView extends Composite<VerticalLayout> {
         buttonPrimary.setText("Button");
         buttonPrimary.setWidth("min-content");
         buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        h3.setText("BURN IT");
+        h3.setText("BURN IT 🔥");
         layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h3);
         h3.setWidth("max-content");
         avatar.setName("Firstname Lastname");
         tabSheet.setWidth("100%");
+        //tabSheet.setJustifyContentMode(JustifyContentMode.SPACE_EVENLY);
         setTabSheetSampleData(tabSheet);
-        h5.setText("for...");
         getContent().setAlignSelf(FlexComponent.Alignment.START, h5);
         h5.setWidth("max-content");
-        h32.setText("Strength");
         getContent().setAlignSelf(FlexComponent.Alignment.START, h32);
         h32.setWidth("max-content");
         h32.setHeight("31px");
@@ -72,10 +76,8 @@ public class WorkoutView extends Composite<VerticalLayout> {
         layoutRow2.addClassName(Gap.MEDIUM);
         layoutRow2.setWidth("100%");
         layoutRow2.getStyle().set("flex-grow", "1");
-        h52.setText("for...");
         getContent().setAlignSelf(FlexComponent.Alignment.START, h52);
         h52.setWidth("max-content");
-        h33.setText("Endurance");
         getContent().setAlignSelf(FlexComponent.Alignment.START, h33);
         h33.setWidth("max-content");
         h33.setHeight("31px");
@@ -84,10 +86,8 @@ public class WorkoutView extends Composite<VerticalLayout> {
         layoutRow3.addClassName(Gap.MEDIUM);
         layoutRow3.setWidth("100%");
         layoutRow3.getStyle().set("flex-grow", "1");
-        h53.setText("for...");
         getContent().setAlignSelf(FlexComponent.Alignment.START, h53);
         h53.setWidth("max-content");
-        h34.setText("Mobility");
         getContent().setAlignSelf(FlexComponent.Alignment.START, h34);
         h34.setWidth("max-content");
         layoutRow4.setWidthFull();
@@ -103,6 +103,11 @@ public class WorkoutView extends Composite<VerticalLayout> {
         getContent().add(h5);
         getContent().add(h32);
         getContent().add(layoutRow2);
+        // Create an image component
+        Image img = new Image("/imgs/img.jpg", "Strength Image");
+        img.setWidth("200px");
+        img.setHeight("auto");
+        getContent().add(img);
         getContent().add(h52);
         getContent().add(h33);
         getContent().add(layoutRow3);
@@ -112,8 +117,66 @@ public class WorkoutView extends Composite<VerticalLayout> {
     }
 
     private void setTabSheetSampleData(TabSheet tabSheet) {
-        tabSheet.add("Dashboard", new Div(new Text("This is the Dashboard tab content")));
-        tabSheet.add("Payment", new Div(new Text("This is the Payment tab content")));
-        tabSheet.add("Shipping", new Div(new Text("This is the Shipping tab content")));
+        // Dashboard Tab Content
+        VerticalLayout dashboardContent = new VerticalLayout();
+        dashboardContent.setSpacing(true);
+        dashboardContent.setWidthFull();
+    
+        // First Row
+        H5 h5 = new H5("for...");
+        h5.setWidth("max-content");
+    
+        H3 h32 = new H3("Strength");
+        h32.setWidth("max-content");
+        h32.setHeight("31px");
+    
+        HorizontalLayout layoutRow2 = new HorizontalLayout();
+        layoutRow2.setWidthFull();
+        layoutRow2.addClassName(Gap.MEDIUM);
+    
+        // Second Row
+        H5 h52 = new H5("for...");
+        h52.setWidth("max-content");
+    
+        H3 h33 = new H3("Endurance");
+        h33.setWidth("max-content");
+        h33.setHeight("31px");
+    
+        HorizontalLayout layoutRow3 = new HorizontalLayout();
+        layoutRow3.setWidthFull();
+        layoutRow3.addClassName(Gap.MEDIUM);
+    
+        // Third Row
+        H5 h53 = new H5("for...");
+        h53.setWidth("max-content");
+    
+        H3 h34 = new H3("Mobility");
+        h34.setWidth("max-content");
+    
+        HorizontalLayout layoutRow4 = new HorizontalLayout();
+        layoutRow4.setWidthFull();
+        layoutRow4.addClassName(Gap.MEDIUM);
+    
+        // Add components to rows
+        layoutRow2.add(h32);
+        layoutRow3.add(h33);
+        layoutRow4.add(h34);
+    
+        // Add all components to dashboard content
+        dashboardContent.add(h5, layoutRow2, h52, layoutRow3, h53, layoutRow4);
+    
+        // Add dashboard content to TabSheet
+        tabSheet.add("Beginner", dashboardContent);
+    
+        // Payment Tab Content
+        Div paymentContent = new Div();
+        paymentContent.add(new Text("This is the Payment tab content."));
+        tabSheet.add("Intermediate", paymentContent);
+    
+        // Shipping Tab Content
+        Div shippingContent = new Div();
+        shippingContent.add(new Text("This is the Shipping tab content."));
+        tabSheet.add("Pro", shippingContent);
     }
+    
 }

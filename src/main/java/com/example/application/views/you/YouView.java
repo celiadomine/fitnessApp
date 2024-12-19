@@ -61,7 +61,7 @@ public class YouView extends Composite<VerticalLayout> {
         layoutRow2.setAlignSelf(FlexComponent.Alignment.CENTER, buttonPrimary);
         buttonPrimary.setWidth("min-content");
         buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        h3.setText("BURN IT");
+        h3.setText("BURN IT 🔥");
         layoutRow2.setAlignSelf(FlexComponent.Alignment.CENTER, h3);
         h3.setWidth("max-content");
         avatar.setName("Firstname Lastname");
