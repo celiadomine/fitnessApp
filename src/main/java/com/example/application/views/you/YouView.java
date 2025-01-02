@@ -57,7 +57,7 @@ public class YouView extends Composite<VerticalLayout> {
         layoutRow2.getStyle().set("flex-grow", "1");
         layoutRow2.setAlignItems(Alignment.CENTER);
         layoutRow2.setJustifyContentMode(JustifyContentMode.CENTER);
-        buttonPrimary.setText("Button");
+        buttonPrimary.setText("Devices");
         layoutRow2.setAlignSelf(FlexComponent.Alignment.CENTER, buttonPrimary);
         buttonPrimary.setWidth("min-content");
         buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);

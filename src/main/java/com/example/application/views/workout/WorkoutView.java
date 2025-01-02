@@ -56,7 +56,7 @@ public class WorkoutView extends Composite<VerticalLayout> {
         layoutRow.setHeight("44px");
         layoutRow.setAlignItems(Alignment.CENTER);
         layoutRow.setJustifyContentMode(JustifyContentMode.CENTER);
-        buttonPrimary.setText("Button");
+        buttonPrimary.setText("Devices");
         buttonPrimary.setWidth("min-content");
         buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         h3.setText("BURN IT 🔥");
@@ -64,7 +64,6 @@ public class WorkoutView extends Composite<VerticalLayout> {
         h3.setWidth("max-content");
         avatar.setName("Firstname Lastname");
         tabSheet.setWidth("100%");
-        //tabSheet.setJustifyContentMode(JustifyContentMode.SPACE_EVENLY);
         setTabSheetSampleData(tabSheet);
         getContent().setAlignSelf(FlexComponent.Alignment.START, h5);
         h5.setWidth("max-content");
@@ -83,18 +82,10 @@ public class WorkoutView extends Composite<VerticalLayout> {
         h33.setHeight("31px");
         layoutRow3.setWidthFull();
         getContent().setFlexGrow(1.0, layoutRow3);
-        layoutRow3.addClassName(Gap.MEDIUM);
-        layoutRow3.setWidth("100%");
-        layoutRow3.getStyle().set("flex-grow", "1");
         getContent().setAlignSelf(FlexComponent.Alignment.START, h53);
         h53.setWidth("max-content");
         getContent().setAlignSelf(FlexComponent.Alignment.START, h34);
         h34.setWidth("max-content");
-        layoutRow4.setWidthFull();
-        getContent().setFlexGrow(1.0, layoutRow4);
-        layoutRow4.addClassName(Gap.MEDIUM);
-        layoutRow4.setWidth("100%");
-        layoutRow4.getStyle().set("flex-grow", "1");
         getContent().add(layoutRow);
         layoutRow.add(buttonPrimary);
         layoutRow.add(h3);
@@ -103,11 +94,6 @@ public class WorkoutView extends Composite<VerticalLayout> {
         getContent().add(h5);
         getContent().add(h32);
         getContent().add(layoutRow2);
-        // Create an image component
-        Image img = new Image("/imgs/img.jpg", "Strength Image");
-        img.setWidth("200px");
-        img.setHeight("auto");
-        getContent().add(img);
         getContent().add(h52);
         getContent().add(h33);
         getContent().add(layoutRow3);
@@ -118,9 +104,9 @@ public class WorkoutView extends Composite<VerticalLayout> {
 
     private void setTabSheetSampleData(TabSheet tabSheet) {
         // Dashboard Tab Content
-        VerticalLayout dashboardContent = new VerticalLayout();
-        dashboardContent.setSpacing(true);
-        dashboardContent.setWidthFull();
+        VerticalLayout beginnerContent = new VerticalLayout();
+        beginnerContent.setSpacing(true);
+        beginnerContent.setWidthFull();
     
         // First Row
         H5 h5 = new H5("for...");
@@ -130,9 +116,15 @@ public class WorkoutView extends Composite<VerticalLayout> {
         h32.setWidth("max-content");
         h32.setHeight("31px");
     
-        HorizontalLayout layoutRow2 = new HorizontalLayout();
-        layoutRow2.setWidthFull();
-        layoutRow2.addClassName(Gap.MEDIUM);
+        // HorizontalLayout layoutRow2 = new HorizontalLayout();
+        // layoutRow2.setWidthFull();
+        // layoutRow2.addClassName(Gap.MEDIUM);
+
+        // Create an image component
+        Image imgSB1 = new Image("/imgs/imgSB1.png", "Strength Image 1");
+        imgSB1.setWidth("auto");
+        imgSB1.setHeight("100px");
+        imgSB1.getStyle().set("border-radius", "10px");
     
         // Second Row
         H5 h52 = new H5("for...");
@@ -142,31 +134,31 @@ public class WorkoutView extends Composite<VerticalLayout> {
         h33.setWidth("max-content");
         h33.setHeight("31px");
     
-        HorizontalLayout layoutRow3 = new HorizontalLayout();
-        layoutRow3.setWidthFull();
-        layoutRow3.addClassName(Gap.MEDIUM);
-    
+        Image imgEB1 = new Image("/imgs/imgEB1.png", "Endurance Image 1");
+        imgEB1.setWidth("auto");
+        imgEB1.setHeight("100px");
+        imgEB1.getStyle().set("border-radius", "10px");
+
         // Third Row
         H5 h53 = new H5("for...");
         h53.setWidth("max-content");
     
         H3 h34 = new H3("Mobility");
         h34.setWidth("max-content");
-    
-        HorizontalLayout layoutRow4 = new HorizontalLayout();
-        layoutRow4.setWidthFull();
-        layoutRow4.addClassName(Gap.MEDIUM);
+
+        Image imgMB1 = new Image("/imgs/imgMB1.png", "Mobility Image 1");
+        imgMB1.setWidth("auto");
+        imgMB1.setHeight("100px");
+        imgMB1.getStyle().set("border-radius", "10px");
     
         // Add components to rows
-        layoutRow2.add(h32);
-        layoutRow3.add(h33);
-        layoutRow4.add(h34);
+        // layoutRow2.add(h32);
     
         // Add all components to dashboard content
-        dashboardContent.add(h5, layoutRow2, h52, layoutRow3, h53, layoutRow4);
+        beginnerContent.add(h5, h32, imgSB1, h52, h33, imgEB1, h53, h34, imgMB1);
     
         // Add dashboard content to TabSheet
-        tabSheet.add("Beginner", dashboardContent);
+        tabSheet.add("Beginner", beginnerContent);
     
         // Payment Tab Content
         Div paymentContent = new Div();

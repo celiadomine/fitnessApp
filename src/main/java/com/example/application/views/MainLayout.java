@@ -27,7 +27,7 @@ public class MainLayout extends AppLayout {
         public MenuItemInfo(String menuTitle, Component icon, Class<? extends Component> view) {
             this.view = view;
             RouterLink link = new RouterLink();
-            link.addClassNames(Display.FLEX, Gap.MEDIUM, AlignItems.CENTER, Padding.Horizontal.XSMALL, TextColor.BODY);
+            link.addClassNames(Display.FLEX, Gap.SMALL, AlignItems.CENTER, Padding.Horizontal.XSMALL, TextColor.BODY);
             link.setRoute(view);
 
             Div text = new Div();

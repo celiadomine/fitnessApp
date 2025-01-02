@@ -28,6 +28,7 @@
       --lumo-primary-color-10pct: #931B3357;
       --lumo-body-text-color: hsla(214, 100%, 100%, 0.9);
       --lumo-primary-text-color: #eee;
+      --lumo-highlight-text-color: #931B33;
       --lumo-base-color: #290d0e;
       --lumo-shade: hsl(359, 100%, 99%);
       --lumo-shade-5pct: hsla(359, 100%, 99%, 0.05);

@@ -70,7 +70,7 @@ public class StatisticsView extends Composite<VerticalLayout> {
         layoutRow.setHeight("44px");
         layoutRow.setAlignItems(Alignment.CENTER);
         layoutRow.setJustifyContentMode(JustifyContentMode.CENTER);
-        buttonPrimary.setText("Button");
+        buttonPrimary.setText("Devices");
         buttonPrimary.setWidth("min-content");
         buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         h3.setText("BURN IT 🔥");
@@ -94,6 +94,7 @@ public class StatisticsView extends Composite<VerticalLayout> {
         progressBar2.setValue(0.5);
         h2.setText("8'305");
         h2.setWidth("max-content");
+        h2.getStyle().set("font-weight", "bold");
         h32.setText("Steps");
         h32.setWidth("max-content");
         layoutRow3.setWidthFull();
@@ -158,7 +159,7 @@ public class StatisticsView extends Composite<VerticalLayout> {
         layoutColumn6.addClassName(Padding.SMALL);
         layoutColumn6.getStyle().set("flex-grow", "1");
         layoutColumn6.getStyle().set("flex-grow", "1");
-        buttonSecondary.setText("7h 32m of sleep");
+        buttonSecondary.setText("Sleep: 7h 32m");
         buttonSecondary.setWidth("min-content");
         buttonSecondary.setMinWidth("100px");
         buttonSecondary.setHeight("50px");
@@ -177,16 +178,16 @@ public class StatisticsView extends Composite<VerticalLayout> {
         layoutColumn7.addClassName(Padding.XSMALL);
         layoutColumn7.setWidth("100%");
         layoutColumn7.getStyle().set("flex-grow", "1");
-        buttonSecondary3.setText("Button");
+        buttonSecondary3.setText("Activity: 1h 23m");
         buttonSecondary3.setWidth("100px");
         buttonSecondary3.setHeight("50px");
         buttonSecondary4.setText("Button");
         buttonSecondary4.setWidth("100px");
         buttonSecondary4.setHeight("50px");
-        buttonPrimary2.setText("Button");
+        buttonPrimary2.setText("more");
         getContent().setAlignSelf(FlexComponent.Alignment.CENTER, buttonPrimary2);
         buttonPrimary2.setWidth("min-content");
-        buttonPrimary2.setHeight("19px");
+        buttonPrimary2.setHeight("22px");
         buttonPrimary2.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         getContent().add(layoutRow);
         layoutRow.add(buttonPrimary);
