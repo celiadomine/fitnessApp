@@ -65,6 +65,7 @@ public class MainLayout extends AppLayout {
        
         UnorderedList list = new UnorderedList();
         list.addClassNames(Display.FLEX, ListStyleType.NONE, Padding.NONE, Margin.NONE);
+        list.getStyle().set("gap", "16px");
 
         for (MenuItemInfo menuItem : createMenuItems()) {
             list.add(menuItem);

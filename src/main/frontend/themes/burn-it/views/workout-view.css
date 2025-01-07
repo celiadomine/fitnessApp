@@ -163,3 +163,15 @@ vaadin-form-layout[empty] {
   min-width: 64px;
   min-height: 32px;
 }
+
+.image {
+  width: auto;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.horizontal-scrolling {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;  
+}

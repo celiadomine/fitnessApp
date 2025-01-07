@@ -161,7 +161,6 @@ public class StatisticsView extends Composite<VerticalLayout> {
         layoutColumn6.addClassName(Gap.XSMALL);
         layoutColumn6.addClassName(Padding.SMALL);
         layoutColumn6.getStyle().set("flex-grow", "1");
-        layoutColumn6.getStyle().set("flex-grow", "1");
         buttonSecondary.setText("7h 32m of sleep");
         buttonSecondary.addClassName("statistics-card");
         buttonSecondary2.setText("23 active minutes");
@@ -182,9 +181,8 @@ public class StatisticsView extends Composite<VerticalLayout> {
         buttonSecondary4.setText("5 floors walked");
         buttonSecondary4.addClassName("statistics-card");
         buttonPrimary2.setText("more");
+        buttonPrimary2.addClassName("more");
         getContent().setAlignSelf(FlexComponent.Alignment.CENTER, buttonPrimary2);
-        buttonPrimary2.setWidth("min-content");
-        buttonPrimary2.setHeight("22px");
         buttonPrimary2.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         getContent().add(layoutRow);
         layoutRow.add(buttonPrimary);

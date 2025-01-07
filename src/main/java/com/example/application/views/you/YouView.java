@@ -104,9 +104,8 @@ public class YouView extends Composite<VerticalLayout> {
         layoutRow4.setWidthFull();
         layoutColumn2.setFlexGrow(1.0, layoutRow4);
         layoutRow4.addClassName(Gap.LARGE);
-        layoutRow4.addClassName(Padding.LARGE);
+        layoutRow4.addClassName(Padding.SMALL);
         layoutRow4.setWidth("100%");
-        layoutRow4.setHeight("73px");
         layoutRow4.setAlignItems(Alignment.CENTER);
         layoutRow4.setJustifyContentMode(JustifyContentMode.CENTER);
         badge.setText("🐧");

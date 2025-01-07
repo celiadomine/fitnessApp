@@ -117,11 +117,21 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H3 h32 = new H3("Strength");
         h32.setWidth("max-content");
         h32.setHeight("31px");
-    
-        Image imgSB1 = new Image("/imgs/imgSB1.png", "Strength Image 1");
-        imgSB1.setWidth("auto");
-        imgSB1.setHeight("100px");
-        imgSB1.getStyle().set("border-radius", "10px");
+
+        //Strength Beginner
+        Image imgSB1 = new Image("/imgs/beginner/imgSB1.png", "Strength Image 1");
+        imgSB1.addClassName("image");
+
+        Image imgSB2 = new Image("/imgs/beginner/imgSB2.png", "Strength Image 2");
+        imgSB2.addClassName("image");
+
+        Image imgSB3 = new Image("/imgs/beginner/imgSB1.png", "Strength Image 3");
+        imgSB3.addClassName("image");
+
+        //for the workout "lines"
+        HorizontalLayout beginnerContentImgs = new HorizontalLayout();
+        beginnerContentImgs.add(imgSB1, imgSB2, imgSB3);
+        beginnerContentImgs.addClassName("horizontal-scrolling");
     
         H5 h52 = new H5("for...");
         h52.setWidth("max-content");
@@ -129,11 +139,21 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H3 h33 = new H3("Endurance");
         h33.setWidth("max-content");
         h33.setHeight("31px");
-    
-        Image imgEB1 = new Image("/imgs/imgEB1.png", "Endurance Image 1");
-        imgEB1.setWidth("auto");
-        imgEB1.setHeight("100px");
-        imgEB1.getStyle().set("border-radius", "10px");
+
+        //Endurance Beginner
+        Image imgEB1 = new Image("/imgs/beginner/imgEB1.png", "Endurance Image 1");
+        imgEB1.addClassName("image");
+
+        Image imgEB2 = new Image("/imgs/beginner/imgEB2.png", "Endurance Image 2");
+        imgEB2.addClassName("image");
+
+        Image imgEB3 = new Image("/imgs/beginner/imgEB1.png", "Endurance Image 3");
+        imgEB3.addClassName("image");
+
+        //for the workout "lines"
+        HorizontalLayout beginnerContentImgs2 = new HorizontalLayout();
+        beginnerContentImgs2.add(imgEB1, imgEB2, imgEB3);
+        beginnerContentImgs2.addClassName("horizontal-scrolling");
 
         H5 h53 = new H5("for...");
         h53.setWidth("max-content");
@@ -141,13 +161,23 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H3 h34 = new H3("Mobility");
         h34.setWidth("max-content");
 
-        Image imgMB1 = new Image("/imgs/imgMB1.png", "Mobility Image 1");
-        imgMB1.setWidth("auto");
-        imgMB1.setHeight("100px");
-        imgMB1.getStyle().set("border-radius", "10px");
-    
+        //Mobility Beginner
+        Image imgMB1 = new Image("/imgs/beginner/imgMB1.png", "Mobility Image 1");
+        imgMB1.addClassName("image");
+
+        Image imgMB2 = new Image("/imgs/beginner/imgMB2.png", "Mobility Image 2");
+        imgMB2.addClassName("image");
+
+        Image imgMB3 = new Image("/imgs/beginner/imgMB1.png", "Mobility Image 3");
+        imgMB3.addClassName("image");
+
+        //for the workout "lines"
+        HorizontalLayout beginnerContentImgs3 = new HorizontalLayout();
+        beginnerContentImgs3.add(imgMB1, imgMB2, imgMB3);
+        beginnerContentImgs3.addClassName("horizontal-scrolling");
+
         // Add all components to dashboard content
-        beginnerContent.add(h5, h32, imgSB1, h52, h33, imgEB1, h53, h34, imgMB1);
+        beginnerContent.add(h5, h32, beginnerContentImgs, h52, h33, beginnerContentImgs2, h53, h34, beginnerContentImgs3);
         tabSheet.add("Beginner", beginnerContent);
 
         // Intermediate Tab Content
@@ -164,10 +194,20 @@ public class WorkoutView extends Composite<VerticalLayout> {
         h35.setWidth("max-content");
         h35.setHeight("31px");
     
-        Image imgSB2 = new Image("/imgs/imgSB2.png", "Strength Image 1");
-        imgSB2.setWidth("auto");
-        imgSB2.setHeight("100px");
-        imgSB2.getStyle().set("border-radius", "10px");
+        //Strength Intermediate
+        Image imgSI1 = new Image("/imgs/intermediate/imgSI1.png", "Strength Image 1");
+        imgSI1.addClassName("image");
+
+        Image imgSI2 = new Image("/imgs/intermediate/imgSI2.png", "Strength Image 2");
+        imgSI2.addClassName("image");
+
+        Image imgSI3 = new Image("/imgs/intermediate/imgSI1.png", "Strength Image 1");
+        imgSI3.addClassName("image");
+
+        //for the workout "lines"
+        HorizontalLayout intermediateContentImgs = new HorizontalLayout();
+        intermediateContentImgs.add(imgSI1, imgSI2, imgSI3);
+        intermediateContentImgs.addClassName("horizontal-scrolling");
     
         H5 h54 = new H5("for...");
         h54.setWidth("max-content");
@@ -176,10 +216,20 @@ public class WorkoutView extends Composite<VerticalLayout> {
         h33.setWidth("max-content");
         h33.setHeight("31px");
     
-        Image imgEB2 = new Image("/imgs/imgEB1.png", "Endurance Image 1");
-        imgEB2.setWidth("auto");
-        imgEB2.setHeight("100px");
-        imgEB2.getStyle().set("border-radius", "10px");
+        //Endurance Intermediate
+        Image imgEI1 = new Image("/imgs/intermediate/imgEI1.png", "Strength Image 1");
+        imgEI1.addClassName("image");
+
+        Image imgEI2 = new Image("/imgs/intermediate/imgEI2.png", "Strength Image 2");
+        imgEI2.addClassName("image");
+
+        Image imgEI3 = new Image("/imgs/intermediate/imgEI1.png", "Strength Image 1");
+        imgEI3.addClassName("image");
+
+        //for the workout "lines"
+        HorizontalLayout intermediateContentImgs2 = new HorizontalLayout();
+        intermediateContentImgs2.add(imgEI1, imgEI2, imgEI3);
+        intermediateContentImgs2.addClassName("horizontal-scrolling");
 
         H5 h55 = new H5("for...");
         h53.setWidth("max-content");
@@ -187,12 +237,22 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H3 h37 = new H3("Mobility");
         h34.setWidth("max-content");
 
-        Image imgMB2 = new Image("/imgs/imgMB2.png", "Mobility Image 1");
-        imgMB2.setWidth("auto");
-        imgMB2.setHeight("100px");
-        imgMB2.getStyle().set("border-radius", "10px");
+        //Mobility Intermediate
+        Image imgMI1 = new Image("/imgs/intermediate/imgMI1.png", "Strength Image 1");
+        imgMI1.addClassName("image");
+
+        Image imgMI2 = new Image("/imgs/intermediate/imgMI2.png", "Strength Image 2");
+        imgMI2.addClassName("image");
+
+        Image imgMI3 = new Image("/imgs/intermediate/imgMI1.png", "Strength Image 1");
+        imgMI3.addClassName("image");
+
+        //for the workout "lines"
+        HorizontalLayout intermediateContentImgs3 = new HorizontalLayout();
+        intermediateContentImgs3.add(imgMI1, imgMI2, imgMI3);
+        intermediateContentImgs3.addClassName("horizontal-scrolling");
     
-        intermediateContent.add(h51, h35, imgSB2, h54, h36, imgEB2, h55, h37, imgMB2);
+        intermediateContent.add(h51, h35, intermediateContentImgs, h54, h36, intermediateContentImgs2, h55, h37, intermediateContentImgs3);
         tabSheet.add("Intermediate", intermediateContent);
     
         // PRO TAB CONTENT
@@ -209,10 +269,20 @@ public class WorkoutView extends Composite<VerticalLayout> {
         h35.setWidth("max-content");
         h35.setHeight("31px");
     
-        Image imgSB3 = new Image("/imgs/imgSB2.png", "Strength Image 1");
-        imgSB3.setWidth("auto");
-        imgSB3.setHeight("100px");
-        imgSB3.getStyle().set("border-radius", "10px");
+        //Profi Strength
+        Image imgSP1 = new Image("/imgs/profi/imgSP1.png", "Strength Image 1");
+        imgSP1.addClassName("image");
+
+        Image imgSP2 = new Image("/imgs/profi/imgSP2.png", "Strength Image 2");
+        imgSP2.addClassName("image");
+
+        Image imgSP3 = new Image("/imgs/profi/imgSP1.png", "Strength Image 1");
+        imgSP3.addClassName("image");
+
+        //for the workout "lines"
+        HorizontalLayout proContentImgs = new HorizontalLayout();
+        proContentImgs.add(imgSP1, imgSP2, imgSP3);
+        proContentImgs.addClassName("horizontal-scrolling");
     
         H5 h57 = new H5("for...");
         h54.setWidth("max-content");
@@ -221,10 +291,20 @@ public class WorkoutView extends Composite<VerticalLayout> {
         h33.setWidth("max-content");
         h33.setHeight("31px");
     
-        Image imgEB3 = new Image("/imgs/imgEB1.png", "Endurance Image 1");
-        imgEB3.setWidth("auto");
-        imgEB3.setHeight("100px");
-        imgEB3.getStyle().set("border-radius", "10px");
+        //Profi Endurance
+        Image imgEP1 = new Image("/imgs/profi/imgEP1.png", "Strength Image 1");
+        imgEP1.addClassName("image");
+
+        Image imgEP2 = new Image("/imgs/profi/imgEP2.png", "Strength Image 2");
+        imgEP2.addClassName("image");
+
+        Image imgEP3 = new Image("/imgs/profi/imgEP1.png", "Strength Image 1");
+        imgEP3.addClassName("image");
+
+        //for the workout "lines"
+        HorizontalLayout proContentImgs2 = new HorizontalLayout();
+        proContentImgs2.add(imgEP1, imgEP2, imgEP3);
+        proContentImgs2.addClassName("horizontal-scrolling");
 
         H5 h58 = new H5("for...");
         h53.setWidth("max-content");
@@ -232,12 +312,23 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H3 h391 = new H3("Mobility");
         h34.setWidth("max-content");
 
-        Image imgMB3 = new Image("/imgs/imgMB2.png", "Mobility Image 1");
-        imgMB3.setWidth("auto");
-        imgMB3.setHeight("100px");
-        imgMB3.getStyle().set("border-radius", "10px");
+        //Profi Mobility
+        Image imgMP1 = new Image("/imgs/profi/imgMP1.png", "Strength Image 1");
+        imgMP1.addClassName("image");
+
+        Image imgMP2 = new Image("/imgs/profi/imgMP2.png", "Strength Image 2");
+        imgMP2.addClassName("image");
+
+        Image imgMP3 = new Image("/imgs/profi/imgMP1.png", "Strength Image 1");
+        imgMP3.addClassName("image");
+
+        //for the workout "lines"
+        HorizontalLayout proContentImgs3 = new HorizontalLayout();
+        proContentImgs3.add(imgMP1, imgMP2, imgMP3);
+        proContentImgs3.addClassName("horizontal-scrolling");
+
      
-        proContent.add(h56, h38, imgSB3, h57, h39, imgEB3, h58, h391, imgMB3);
+        proContent.add(h56, h38, proContentImgs, h57, h39, proContentImgs2, h58, h391, proContentImgs3);
         tabSheet.add("Pro", proContent);
     }
     
