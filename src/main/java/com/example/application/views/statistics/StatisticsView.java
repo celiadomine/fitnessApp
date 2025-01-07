@@ -22,6 +22,16 @@ import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
 import com.vaadin.flow.theme.lumo.LumoUtility.Padding;
 import org.vaadin.lineawesome.LineAwesomeIconUrl;
 
+/**
+ * The StatisticsView class represents a view for displaying various statistics in the application.
+ * It extends the Composite class with a VerticalLayout as the content.
+ * 
+ * Annotations:
+ * - @PageTitle: Sets the title of the page to "Statistics".
+ * - @Route: Defines the route for this view as the root ("/").
+ * - @Menu: Adds this view to the menu with order 0 and an icon.
+ */
+
 @PageTitle("Statistics")
 @Route("")
 @Menu(order = 0, icon = LineAwesomeIconUrl.CHART_BAR_SOLID)
