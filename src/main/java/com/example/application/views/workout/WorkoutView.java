@@ -7,7 +7,7 @@ import com.vaadin.flow.component.avatar.Avatar;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H3;
+import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
@@ -31,19 +31,19 @@ public class WorkoutView extends Composite<VerticalLayout> {
     public WorkoutView() {
         HorizontalLayout layoutRow = new HorizontalLayout();
         Button buttonPrimary = new Button();
-        H3 h3 = new H3();
+        H2 H2 = new H2();
         Avatar avatar = new Avatar();
         RouterLink link = new RouterLink("", YouView.class);
         link.add(avatar);
         TabSheet tabSheet = new TabSheet();
         H5 h5 = new H5();
-        H3 h32 = new H3();
+        H2 H22 = new H2();
         HorizontalLayout layoutRow2 = new HorizontalLayout();
         H5 h52 = new H5();
-        H3 h33 = new H3();
+        H2 H23 = new H2();
         HorizontalLayout layoutRow3 = new HorizontalLayout();
         H5 h53 = new H5();
-        H3 h34 = new H3();
+        H2 H24 = new H2();
         HorizontalLayout layoutRow4 = new HorizontalLayout();
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
@@ -59,17 +59,17 @@ public class WorkoutView extends Composite<VerticalLayout> {
         buttonPrimary.setText("Devices");
         buttonPrimary.setWidth("min-content");
         buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        h3.setText("BURN IT 🔥");
-        layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h3);
-        h3.setWidth("max-content");
+        H2.setText("BURN IT 🔥");
+        layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, H2);
+        H2.setWidth("max-content");
         avatar.setName("Firstname Lastname");
         tabSheet.setWidth("100%");
         setTabSheetSampleData(tabSheet);
         getContent().setAlignSelf(FlexComponent.Alignment.START, h5);
         h5.setWidth("max-content");
-        getContent().setAlignSelf(FlexComponent.Alignment.START, h32);
-        h32.setWidth("max-content");
-        h32.setHeight("31px");
+        getContent().setAlignSelf(FlexComponent.Alignment.START, H22);
+        H22.setWidth("max-content");
+        H22.setHeight("31px");
         layoutRow2.setWidthFull();
         getContent().setFlexGrow(1.0, layoutRow2);
         layoutRow2.addClassName(Gap.MEDIUM);
@@ -77,28 +77,28 @@ public class WorkoutView extends Composite<VerticalLayout> {
         layoutRow2.getStyle().set("flex-grow", "1");
         getContent().setAlignSelf(FlexComponent.Alignment.START, h52);
         h52.setWidth("max-content");
-        getContent().setAlignSelf(FlexComponent.Alignment.START, h33);
-        h33.setWidth("max-content");
-        h33.setHeight("31px");
+        getContent().setAlignSelf(FlexComponent.Alignment.START, H23);
+        H23.setWidth("max-content");
+        H23.setHeight("31px");
         layoutRow3.setWidthFull();
         getContent().setFlexGrow(1.0, layoutRow3);
         getContent().setAlignSelf(FlexComponent.Alignment.START, h53);
         h53.setWidth("max-content");
-        getContent().setAlignSelf(FlexComponent.Alignment.START, h34);
-        h34.setWidth("max-content");
+        getContent().setAlignSelf(FlexComponent.Alignment.START, H24);
+        H24.setWidth("max-content");
         getContent().add(layoutRow);
         layoutRow.add(buttonPrimary);
-        layoutRow.add(h3);
+        layoutRow.add(H2);
         layoutRow.add(avatar);
         getContent().add(tabSheet);
         getContent().add(h5);
-        getContent().add(h32);
+        getContent().add(H22);
         getContent().add(layoutRow2);
         getContent().add(h52);
-        getContent().add(h33);
+        getContent().add(H23);
         getContent().add(layoutRow3);
         getContent().add(h53);
-        getContent().add(h34);
+        getContent().add(H24);
         getContent().add(layoutRow4);
     }
 
@@ -114,9 +114,9 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H5 h5 = new H5("for...");
         h5.setWidth("max-content");
     
-        H3 h32 = new H3("Strength");
-        h32.setWidth("max-content");
-        h32.setHeight("31px");
+        H2 H22 = new H2("Strength");
+        H22.setWidth("max-content");
+        H22.setHeight("31px");
 
         //Strength Beginner
         Image imgSB1 = new Image("/imgs/beginner/imgSB1.png", "Strength Image 1");
@@ -136,9 +136,9 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H5 h52 = new H5("for...");
         h52.setWidth("max-content");
     
-        H3 h33 = new H3("Endurance");
-        h33.setWidth("max-content");
-        h33.setHeight("31px");
+        H2 H23 = new H2("Endurance");
+        H23.setWidth("max-content");
+        H23.setHeight("31px");
 
         //Endurance Beginner
         Image imgEB1 = new Image("/imgs/beginner/imgEB1.png", "Endurance Image 1");
@@ -158,8 +158,8 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H5 h53 = new H5("for...");
         h53.setWidth("max-content");
     
-        H3 h34 = new H3("Mobility");
-        h34.setWidth("max-content");
+        H2 H24 = new H2("Mobility");
+        H24.setWidth("max-content");
 
         //Mobility Beginner
         Image imgMB1 = new Image("/imgs/beginner/imgMB1.png", "Mobility Image 1");
@@ -177,7 +177,7 @@ public class WorkoutView extends Composite<VerticalLayout> {
         beginnerContentImgs3.addClassName("horizontal-scrolling");
 
         // Add all components to dashboard content
-        beginnerContent.add(h5, h32, beginnerContentImgs, h52, h33, beginnerContentImgs2, h53, h34, beginnerContentImgs3);
+        beginnerContent.add(h5, H22, beginnerContentImgs, h52, H23, beginnerContentImgs2, h53, H24, beginnerContentImgs3);
         tabSheet.add("Beginner", beginnerContent);
 
         // Intermediate Tab Content
@@ -190,9 +190,9 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H5 h51 = new H5("for...");
         h51.setWidth("max-content");
     
-        H3 h35 = new H3("Strength");
-        h35.setWidth("max-content");
-        h35.setHeight("31px");
+        H2 H25 = new H2("Strength");
+        H25.setWidth("max-content");
+        H25.setHeight("31px");
     
         //Strength Intermediate
         Image imgSI1 = new Image("/imgs/intermediate/imgSI1.png", "Strength Image 1");
@@ -212,9 +212,9 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H5 h54 = new H5("for...");
         h54.setWidth("max-content");
     
-        H3 h36 = new H3("Endurance");
-        h33.setWidth("max-content");
-        h33.setHeight("31px");
+        H2 H26 = new H2("Endurance");
+        H23.setWidth("max-content");
+        H23.setHeight("31px");
     
         //Endurance Intermediate
         Image imgEI1 = new Image("/imgs/intermediate/imgEI1.png", "Strength Image 1");
@@ -234,8 +234,8 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H5 h55 = new H5("for...");
         h53.setWidth("max-content");
     
-        H3 h37 = new H3("Mobility");
-        h34.setWidth("max-content");
+        H2 H27 = new H2("Mobility");
+        H24.setWidth("max-content");
 
         //Mobility Intermediate
         Image imgMI1 = new Image("/imgs/intermediate/imgMI1.png", "Strength Image 1");
@@ -252,7 +252,7 @@ public class WorkoutView extends Composite<VerticalLayout> {
         intermediateContentImgs3.add(imgMI1, imgMI2, imgMI3);
         intermediateContentImgs3.addClassName("horizontal-scrolling");
     
-        intermediateContent.add(h51, h35, intermediateContentImgs, h54, h36, intermediateContentImgs2, h55, h37, intermediateContentImgs3);
+        intermediateContent.add(h51, H25, intermediateContentImgs, h54, H26, intermediateContentImgs2, h55, H27, intermediateContentImgs3);
         tabSheet.add("Intermediate", intermediateContent);
     
         // PRO TAB CONTENT
@@ -265,9 +265,9 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H5 h56 = new H5("for...");
         h51.setWidth("max-content");
     
-        H3 h38 = new H3("Strength");
-        h35.setWidth("max-content");
-        h35.setHeight("31px");
+        H2 H28 = new H2("Strength");
+        H25.setWidth("max-content");
+        H25.setHeight("31px");
     
         //Profi Strength
         Image imgSP1 = new Image("/imgs/profi/imgSP1.png", "Strength Image 1");
@@ -287,9 +287,9 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H5 h57 = new H5("for...");
         h54.setWidth("max-content");
     
-        H3 h39 = new H3("Endurance");
-        h33.setWidth("max-content");
-        h33.setHeight("31px");
+        H2 H29 = new H2("Endurance");
+        H23.setWidth("max-content");
+        H23.setHeight("31px");
     
         //Profi Endurance
         Image imgEP1 = new Image("/imgs/profi/imgEP1.png", "Strength Image 1");
@@ -309,8 +309,8 @@ public class WorkoutView extends Composite<VerticalLayout> {
         H5 h58 = new H5("for...");
         h53.setWidth("max-content");
     
-        H3 h391 = new H3("Mobility");
-        h34.setWidth("max-content");
+        H2 H291 = new H2("Mobility");
+        H24.setWidth("max-content");
 
         //Profi Mobility
         Image imgMP1 = new Image("/imgs/profi/imgMP1.png", "Strength Image 1");
@@ -328,7 +328,7 @@ public class WorkoutView extends Composite<VerticalLayout> {
         proContentImgs3.addClassName("horizontal-scrolling");
 
      
-        proContent.add(h56, h38, proContentImgs, h57, h39, proContentImgs2, h58, h391, proContentImgs3);
+        proContent.add(h56, H28, proContentImgs, h57, H29, proContentImgs2, h58, H291, proContentImgs3);
         tabSheet.add("Pro", proContent);
     }
     

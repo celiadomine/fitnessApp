@@ -32,7 +32,8 @@ public class MainLayout extends AppLayout {
 
             Div text = new Div();
             text.setText(menuTitle);
-            text.addClassNames(FontWeight.BOLD, FontSize.MEDIUM, TextColor.PRIMARY);
+            text.addClassNames(FontWeight.BOLD, FontSize.LARGE, TextColor.PRIMARY);
+            text.getStyle().set("font-size", "bold");
 
             if (icon != null) {
                 link.add(icon);
