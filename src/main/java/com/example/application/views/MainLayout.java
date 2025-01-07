@@ -32,7 +32,7 @@ public class MainLayout extends AppLayout {
 
             Div text = new Div();
             text.setText(menuTitle);
-            text.addClassNames(FontWeight.BOLD, FontSize.MEDIUM, TextColor.SECONDARY);
+            text.addClassNames(FontWeight.BOLD, FontSize.MEDIUM, TextColor.PRIMARY);
 
             if (icon != null) {
                 link.add(icon);
@@ -62,7 +62,7 @@ public class MainLayout extends AppLayout {
 
         Nav nav = new Nav();
         nav.addClassNames(Display.FLEX, JustifyContent.EVENLY, Width.FULL);
-
+       
         UnorderedList list = new UnorderedList();
         list.addClassNames(Display.FLEX, ListStyleType.NONE, Padding.NONE, Margin.NONE);
 

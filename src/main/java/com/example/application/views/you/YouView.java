@@ -109,14 +109,17 @@ public class YouView extends Composite<VerticalLayout> {
         layoutRow4.setHeight("73px");
         layoutRow4.setAlignItems(Alignment.CENTER);
         layoutRow4.setJustifyContentMode(JustifyContentMode.CENTER);
-        badge.setText("402 lifetime km");
+        badge.setText("🐧");
         badge.setWidth("min-content");
+        badge.addClassName("badge");
         badge.getElement().getThemeList().add("badge");
-        badge2.setText("137 lifetime km");
+        badge2.setText("🏃");
         badge2.setWidth("min-content");
+        badge2.addClassName("badge");
         badge2.getElement().getThemeList().add("badge");
-        badge3.setText("65 lifetime km");
+        badge3.setText("🎀");
         badge3.setWidth("min-content");
+        badge3.addClassName("badge");
         badge3.getElement().getThemeList().add("badge");
         getContent().add(layoutRow);
         layoutRow.add(layoutRow2);
@@ -143,5 +146,6 @@ public class YouView extends Composite<VerticalLayout> {
         avatarItem.setHeading("Aria Bailey");
         avatarItem.setDescription("Endocrinologist");
         avatarItem.setAvatar(new Avatar("Aria Bailey"));
+        avatarItem.addClassName("avatar");
     }
 }

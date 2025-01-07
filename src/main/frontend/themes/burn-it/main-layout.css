@@ -18,9 +18,14 @@ footer nav a:focus-visible {
 }
 
 footer nav a[highlight] vaadin-icon {
-  color: var(--lumo-highlight-text-color);
+  color: #d03151;
 }
 
 footer nav a[highlight] {
-  background-color: var(--lumo-primary-color-10pct);
+  background-color: #00000047;
+}
+
+footer nav {
+  background-color: var(--lumo-primary-color);
+  padding: 15px 0;
 }

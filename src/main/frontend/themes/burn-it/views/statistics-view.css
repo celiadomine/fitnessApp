@@ -163,3 +163,13 @@ vaadin-form-layout[empty] {
   min-width: 64px;
   min-height: 32px;
 }
+
+.statistics-card {
+  font-size: 15px;
+  width: 100%;
+  min-width: 140px;
+  height: 80px;
+  font-weight: bold;
+  background-color: #4d121ac2;
+  margin-bottom: 15px;
+}

@@ -103,12 +103,14 @@ public class WorkoutView extends Composite<VerticalLayout> {
     }
 
     private void setTabSheetSampleData(TabSheet tabSheet) {
-        // Dashboard Tab Content
+
+        // BEGINNER TAG CONTENT
+
+        //settings
         VerticalLayout beginnerContent = new VerticalLayout();
         beginnerContent.setSpacing(true);
         beginnerContent.setWidthFull();
-    
-        // First Row
+
         H5 h5 = new H5("for...");
         h5.setWidth("max-content");
     
@@ -116,17 +118,11 @@ public class WorkoutView extends Composite<VerticalLayout> {
         h32.setWidth("max-content");
         h32.setHeight("31px");
     
-        // HorizontalLayout layoutRow2 = new HorizontalLayout();
-        // layoutRow2.setWidthFull();
-        // layoutRow2.addClassName(Gap.MEDIUM);
-
-        // Create an image component
         Image imgSB1 = new Image("/imgs/imgSB1.png", "Strength Image 1");
         imgSB1.setWidth("auto");
         imgSB1.setHeight("100px");
         imgSB1.getStyle().set("border-radius", "10px");
     
-        // Second Row
         H5 h52 = new H5("for...");
         h52.setWidth("max-content");
     
@@ -139,7 +135,6 @@ public class WorkoutView extends Composite<VerticalLayout> {
         imgEB1.setHeight("100px");
         imgEB1.getStyle().set("border-radius", "10px");
 
-        // Third Row
         H5 h53 = new H5("for...");
         h53.setWidth("max-content");
     
@@ -151,24 +146,99 @@ public class WorkoutView extends Composite<VerticalLayout> {
         imgMB1.setHeight("100px");
         imgMB1.getStyle().set("border-radius", "10px");
     
-        // Add components to rows
-        // layoutRow2.add(h32);
-    
         // Add all components to dashboard content
         beginnerContent.add(h5, h32, imgSB1, h52, h33, imgEB1, h53, h34, imgMB1);
-    
-        // Add dashboard content to TabSheet
         tabSheet.add("Beginner", beginnerContent);
+
+        // Intermediate Tab Content
+
+        //settings
+        VerticalLayout intermediateContent = new VerticalLayout();
+        intermediateContent.setSpacing(true);
+        intermediateContent.setWidthFull();
+
+        H5 h51 = new H5("for...");
+        h51.setWidth("max-content");
     
-        // Payment Tab Content
-        Div paymentContent = new Div();
-        paymentContent.add(new Text("This is the Payment tab content."));
-        tabSheet.add("Intermediate", paymentContent);
+        H3 h35 = new H3("Strength");
+        h35.setWidth("max-content");
+        h35.setHeight("31px");
     
-        // Shipping Tab Content
-        Div shippingContent = new Div();
-        shippingContent.add(new Text("This is the Shipping tab content."));
-        tabSheet.add("Pro", shippingContent);
+        Image imgSB2 = new Image("/imgs/imgSB2.png", "Strength Image 1");
+        imgSB2.setWidth("auto");
+        imgSB2.setHeight("100px");
+        imgSB2.getStyle().set("border-radius", "10px");
+    
+        H5 h54 = new H5("for...");
+        h54.setWidth("max-content");
+    
+        H3 h36 = new H3("Endurance");
+        h33.setWidth("max-content");
+        h33.setHeight("31px");
+    
+        Image imgEB2 = new Image("/imgs/imgEB1.png", "Endurance Image 1");
+        imgEB2.setWidth("auto");
+        imgEB2.setHeight("100px");
+        imgEB2.getStyle().set("border-radius", "10px");
+
+        H5 h55 = new H5("for...");
+        h53.setWidth("max-content");
+    
+        H3 h37 = new H3("Mobility");
+        h34.setWidth("max-content");
+
+        Image imgMB2 = new Image("/imgs/imgMB2.png", "Mobility Image 1");
+        imgMB2.setWidth("auto");
+        imgMB2.setHeight("100px");
+        imgMB2.getStyle().set("border-radius", "10px");
+    
+        intermediateContent.add(h51, h35, imgSB2, h54, h36, imgEB2, h55, h37, imgMB2);
+        tabSheet.add("Intermediate", intermediateContent);
+    
+        // PRO TAB CONTENT
+
+        //settings
+        VerticalLayout proContent = new VerticalLayout();
+        proContent.setSpacing(true);
+        proContent.setWidthFull();
+
+        H5 h56 = new H5("for...");
+        h51.setWidth("max-content");
+    
+        H3 h38 = new H3("Strength");
+        h35.setWidth("max-content");
+        h35.setHeight("31px");
+    
+        Image imgSB3 = new Image("/imgs/imgSB2.png", "Strength Image 1");
+        imgSB3.setWidth("auto");
+        imgSB3.setHeight("100px");
+        imgSB3.getStyle().set("border-radius", "10px");
+    
+        H5 h57 = new H5("for...");
+        h54.setWidth("max-content");
+    
+        H3 h39 = new H3("Endurance");
+        h33.setWidth("max-content");
+        h33.setHeight("31px");
+    
+        Image imgEB3 = new Image("/imgs/imgEB1.png", "Endurance Image 1");
+        imgEB3.setWidth("auto");
+        imgEB3.setHeight("100px");
+        imgEB3.getStyle().set("border-radius", "10px");
+
+        H5 h58 = new H5("for...");
+        h53.setWidth("max-content");
+    
+        H3 h391 = new H3("Mobility");
+        h34.setWidth("max-content");
+
+        Image imgMB3 = new Image("/imgs/imgMB2.png", "Mobility Image 1");
+        imgMB3.setWidth("auto");
+        imgMB3.setHeight("100px");
+        imgMB3.getStyle().set("border-radius", "10px");
+     
+        proContent.add(h56, h38, imgSB3, h57, h39, imgEB3, h58, h391, imgMB3);
+        tabSheet.add("Pro", proContent);
     }
     
 }
