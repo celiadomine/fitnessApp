@@ -38,6 +38,7 @@ import org.vaadin.lineawesome.LineAwesomeIconUrl;
 public class StatisticsView extends Composite<VerticalLayout> {
 
     public StatisticsView() {
+        //create objects
         HorizontalLayout layoutRow = new HorizontalLayout();
         Button buttonPrimary = new Button();
         H2 H2 = new H2();
@@ -70,44 +71,35 @@ public class StatisticsView extends Composite<VerticalLayout> {
         Button buttonSecondary3 = new Button();
         Button buttonSecondary4 = new Button();
         Button buttonPrimary2 = new Button();
-        getContent().setWidth("100%");
-        getContent().getStyle().set("flex-grow", "1");
-        getContent().setJustifyContentMode(JustifyContentMode.CENTER);
-        getContent().setAlignItems(Alignment.CENTER);
-        layoutRow.setWidthFull();
-        getContent().setFlexGrow(1.0, layoutRow);
+
+        //styles
+
+        //top menu
+        layoutRow.addClassName("layoutRow");
         layoutRow.addClassName(Gap.XLARGE);
-        layoutRow.setWidth("100%");
-        layoutRow.setHeight("44px");
-        layoutRow.setAlignItems(Alignment.CENTER);
-        layoutRow.setJustifyContentMode(JustifyContentMode.CENTER);
-        layoutRow.getStyle().set("margin-bottom", "40px");
+        
         buttonPrimary.setText("Devices");
         buttonPrimary.setWidth("min-content");
         buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+
         H2.setText("BURN IT 🔥");
         layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, H2);
         H2.setWidth("max-content");
+
         avatar.setName("Firstname Lastname");
-        layoutRow2.setWidthFull();
-        getContent().setFlexGrow(1.0, layoutRow2);
+        
+        //big statistics
+        layoutRow2.addClassName("layoutRow2");
         layoutRow2.addClassName(Gap.LARGE);
-        layoutRow2.setWidth("100%");
-        layoutRow2.setHeight("80px");
-        layoutRow2.setAlignItems(Alignment.CENTER);
-        layoutRow2.setJustifyContentMode(JustifyContentMode.CENTER);
-        layoutColumn2.setHeightFull();
-        layoutRow2.setFlexGrow(1.0, layoutColumn2);
-        layoutColumn2.setWidth("100%");
-        layoutColumn2.setHeight("auto");
-        layoutColumn2.setJustifyContentMode(JustifyContentMode.CENTER);
-        layoutColumn2.setAlignItems(Alignment.CENTER);
+        layoutColumn2.addClassName("layoutColumn2");
         progressBar2.setValue(0.5);
         h2.setText("8'305");
         h2.setWidth("max-content");
         h2.getStyle().set("font-weight", "bold");
         H22.setText("Steps");
         H22.setWidth("max-content");
+
+        //small stats
         layoutRow3.setWidthFull();
         getContent().setFlexGrow(1.0, layoutRow3);
         layoutRow3.addClassName(Gap.XSMALL);
@@ -116,6 +108,8 @@ public class StatisticsView extends Composite<VerticalLayout> {
         layoutRow3.getStyle().set("flex-grow", "1");
         layoutRow3.setAlignItems(Alignment.CENTER);
         layoutRow3.setJustifyContentMode(JustifyContentMode.CENTER);
+
+        //left stat
         layoutColumn3.setHeightFull();
         layoutRow3.setFlexGrow(1.0, layoutColumn3);
         layoutColumn3.setWidth("100px");
@@ -131,9 +125,11 @@ public class StatisticsView extends Composite<VerticalLayout> {
         h52.setWidth("max-content");
         layoutColumn4.setHeightFull();
         layoutRow3.setFlexGrow(1.0, layoutColumn4);
+
+        //middle stat
         layoutColumn4.setWidth("min-content");
         layoutColumn4.setMinWidth("100px");
-        layoutColumn4.getStyle().set("flex-grow", "1");
+        layoutColumn4.getStyle().set("flex-grow", "3");
         layoutColumn4.setJustifyContentMode(JustifyContentMode.CENTER);
         layoutColumn4.setAlignItems(Alignment.CENTER);
         progressBar4.setValue(0.5);
@@ -143,6 +139,8 @@ public class StatisticsView extends Composite<VerticalLayout> {
         h54.setText("km");
         layoutColumn4.setAlignSelf(FlexComponent.Alignment.CENTER, h54);
         h54.setWidth("max-content");
+
+        //right stat
         layoutColumn5.setHeightFull();
         layoutRow3.setFlexGrow(1.0, layoutColumn5);
         layoutColumn5.setWidth("100px");
@@ -156,6 +154,8 @@ public class StatisticsView extends Composite<VerticalLayout> {
         h56.setWidth("max-content");
         layoutRow4.setWidthFull();
         getContent().setFlexGrow(1.0, layoutRow4);
+
+        //styles
         layoutRow4.addClassName(Gap.XSMALL);
         layoutRow4.setWidth("100%");
         layoutRow4.getStyle().set("flex-grow", "1");
@@ -192,6 +192,8 @@ public class StatisticsView extends Composite<VerticalLayout> {
         buttonPrimary2.addClassName("more");
         getContent().setAlignSelf(FlexComponent.Alignment.CENTER, buttonPrimary2);
         buttonPrimary2.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+
+        //put everything together
         getContent().add(layoutRow);
         layoutRow.add(buttonPrimary);
         layoutRow.add(H2);

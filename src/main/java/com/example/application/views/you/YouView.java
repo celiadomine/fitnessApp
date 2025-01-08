@@ -25,6 +25,7 @@ import org.vaadin.lineawesome.LineAwesomeIconUrl;
 public class YouView extends Composite<VerticalLayout> {
 
     public YouView() {
+        //create objects
         HorizontalLayout layoutRow = new HorizontalLayout();
         HorizontalLayout layoutRow2 = new HorizontalLayout();
         Button buttonPrimary = new Button();
@@ -46,6 +47,8 @@ public class YouView extends Composite<VerticalLayout> {
         Span badge3 = new Span();
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
+        
+        //top menu
         layoutRow.addClassName(Gap.MEDIUM);
         layoutRow.setWidth("100%");
         layoutRow.setHeight("min-content");
@@ -64,13 +67,17 @@ public class YouView extends Composite<VerticalLayout> {
         H2.setText("BURN IT 🔥");
         layoutRow2.setAlignSelf(FlexComponent.Alignment.CENTER, H2);
         H2.setWidth("max-content");
+
         avatar.setName("Firstname Lastname");
         layoutRow2.setAlignSelf(FlexComponent.Alignment.CENTER, avatar);
         layoutColumn2.setWidth("100%");
         layoutColumn2.getStyle().set("flex-grow", "1");
         layoutColumn2.setAlignSelf(FlexComponent.Alignment.START, avatarItem);
         avatarItem.setWidth("min-content");
+
+        //add the infos to the avatar
         setAvatarItemSampleData(avatarItem);
+
         layoutRow5.setWidthFull();
         layoutColumn2.setFlexGrow(1.0, layoutRow5);
         layoutRow5.addClassName(Gap.MEDIUM);
@@ -85,6 +92,8 @@ public class YouView extends Composite<VerticalLayout> {
         layoutRow3.setHeight("40px");
         layoutRow3.setAlignItems(Alignment.CENTER);
         layoutRow3.setJustifyContentMode(JustifyContentMode.CENTER);
+
+        //goals
         buttonPrimary2.setText("Sleep");
         buttonPrimary2.setWidth("min-content");
         buttonPrimary2.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
@@ -94,11 +103,15 @@ public class YouView extends Composite<VerticalLayout> {
         buttonPrimary4.setText("Health");
         buttonPrimary4.setWidth("min-content");
         buttonPrimary4.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+
+        //random space
         layoutRow6.setWidthFull();
         layoutColumn2.setFlexGrow(1.0, layoutRow6);
         layoutRow6.addClassName(Gap.MEDIUM);
         layoutRow6.setWidth("100%");
         layoutRow6.setHeight("30px");
+
+        //badges
         H23.setText("Badges");
         H23.setWidth("max-content");
         layoutRow4.setWidthFull();
@@ -120,6 +133,8 @@ public class YouView extends Composite<VerticalLayout> {
         badge3.setWidth("min-content");
         badge3.addClassName("badge");
         badge3.getElement().getThemeList().add("badge");
+
+        //put everything together
         getContent().add(layoutRow);
         layoutRow.add(layoutRow2);
         layoutRow2.add(buttonPrimary);
@@ -141,6 +156,7 @@ public class YouView extends Composite<VerticalLayout> {
         layoutRow4.add(badge3);
     }
 
+    //data of the avatar
     private void setAvatarItemSampleData(AvatarItem avatarItem) {
         avatarItem.setHeading("Aria Bailey");
         avatarItem.setDescription("Endocrinologist");
